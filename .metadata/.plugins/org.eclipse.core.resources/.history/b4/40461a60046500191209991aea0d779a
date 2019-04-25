@@ -1,0 +1,19 @@
+package DataStructures;
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		String[] alphabet = {"a","b","c","d","e"};
+		
+		for (int i = 0; i < 5; i++) {
+			System.out.println(alphabet[i]);
+		}
+		
+		System.out.println("Using the length variable");
+		for (int n = 0; n < alphabet.length; n++) {
+			System.out.print(alphabet[n] + " ");
+		}
+
+	}
+
+}

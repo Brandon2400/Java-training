@@ -1,0 +1,47 @@
+package DataStructures;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Sets {
+
+	public static void main(String[] args) {
+		// 1. Define the collection
+		Set<String> animals = new HashSet<String>();
+		
+		// 2. Adding elements
+		animals.add("dog");
+		animals.add("pig");
+		animals.add("snake");
+		animals.add("cat");
+		
+		System.out.println(animals.size() + " " + animals);
+		
+		animals.add("snake");
+		animals.add("cat");
+		animals.add("fox");
+		System.out.println(animals.size() + " " + animals);
+		
+		// Create a new set that we use for comparison
+		Set<String> farmAnimals = new HashSet<String>();
+		farmAnimals.add("chicken");
+		farmAnimals.add("cow");
+		farmAnimals.add("pig");
+		farmAnimals.add("horse");
+		farmAnimals.add("dog");
+		
+		// What is the INTERSECTION between animals and farm animals
+		// what are the shared properties
+		// 1. Copy existing set into a new set
+		Set<String> intersectionSet = new HashSet<String>(animals);
+		// 2. Retain only the elements that are also in the other set
+		intersectionSet.retainAll(farmAnimals);
+		System.out.println("The intersection is: " + intersectionSet);
+		
+		// What is the UNION
+		Set<String> unionSet = new HashSet<String>(farmAnimals);
+		unionSet.addAll(animals);
+		System.out.println("The union is: " + unionSet);
+	}
+
+}

@@ -1,0 +1,15 @@
+package Algorithms;
+
+public class Search {
+	
+	public static int LinearSearch(int[] dataSet, int target) {
+		// iterate through dataSet searching for target
+		for (int i = 0; i < dataSet.length; i++) {
+			if (dataSet[i] == target) {
+				return i; 
+			}
+		}
+		return -1;
+	}
+
+}

@@ -1,0 +1,53 @@
+package Files;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class PhoneNumberApp {
+
+	public static void main(String[] args) {
+		// This will read a text file and will retrieve a phone number
+		// Valid phone number 
+			// 10 digits long
+			// Area code cannot start with 0 or 9
+			// can be 911 in phone
+	
+		String filename = "C:\\Users\\brand\\Documents\\Java course\\Files\\phonenumbers.txt";
+		File file = new File(filename);
+		String PhoneNum = null;
+		
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(file));
+			PhoneNum = br.readLine();
+			br.close();
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("ERROR: File not found");
+
+		} catch (IOException e) {
+			System.out.println("ERROR: Could not read file");
+		}
+		
+		try {
+			if (PhoneNum.length() != 9) {
+				throw new TenDigitsException();
+			}
+			System.out.println(PhoneNum);
+		} catch(TenDigitsException e) {
+			System.out.println("ERROR: Phone number is not 10 digits");
+		}
+		
+	}
+}
+
+class TenDigitsException extends Exception {
+	
+}
+
+class AreaCodeException extends Exception {
+	
+}
+

@@ -1,0 +1,20 @@
+package DataStructures;
+
+import java.util.HashSet;
+
+public class Sets {
+
+	public static void main(String[] args) {
+		// 1. Define the collection
+		HashSet<String> animals = new HashSet<String>();
+		
+		// 2. Adding elements
+		animals.add("dog");
+		animals.add("pig");
+		animals.add("snake");
+		animals.add("cat");
+		
+		System.out.println(animals);
+	}
+
+}

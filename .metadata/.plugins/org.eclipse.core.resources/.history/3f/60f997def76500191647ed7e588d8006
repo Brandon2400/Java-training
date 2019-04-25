@@ -1,0 +1,13 @@
+package Algorithms;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		int[] numbers = {10, 25, 455, 74, 91, 245, 357};
+		
+		// call a function that searches for a specific number
+		int pos = Algorithms.Search.LinearSearch(numbers, 74);
+		System.out.println("Found at position " + pos);
+	}
+
+}
